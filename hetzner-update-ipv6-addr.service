@@ -1,0 +1,11 @@
+[Unit]
+Description=Update DNS record at hetzner with the ipv6 from ds-lite
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/hetzner_update_ipv6_addr.sh
+
+[Install]
+WantedBy=network-online.target
+#WantedBy=multi-user.target
+# network-online.target

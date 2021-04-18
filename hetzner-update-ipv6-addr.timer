@@ -1,0 +1,10 @@
+[Unit]
+Description=5min timer for hetzner ip update
+
+[Timer]
+# runs every 5 minutes
+OnCalendar=*:0/5
+Unit=hetzner-update-ipv6-addr.service
+
+[Install]
+WantedBy=timers.target
